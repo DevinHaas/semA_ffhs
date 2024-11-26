@@ -1,0 +1,111 @@
+%! Author = devinhasler
+%! Date = 26.11.2024
+\documentclass{ffhsthesis}
+\usepackage[utf8]{inputenc}
+\usepackage{biblatex}
+\usepackage{FFHS}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{scrlayer-scrpage}
+\usepackage[autostyle]{csquotes}
+
+% Set header height to avoid fancyhdr warning
+\setlength{\headheight}{46.75916pt}
+
+
+\ihead{\includegraphics[height=0.7cm]{images/FFHS_Logo}} % Left header (logo)
+\ohead{Devin Hasler} % Right header (name)
+
+
+\addbibresource{literature.bib} % Hinzufügen der Referenzen
+
+\begin{document}
+    \dokumentTyp{Semesterarbeit}
+    \studiengang{Informatik}
+    \title{Entwicklung eines nativen Moduls zur Screen-Time-Überwachung in einer React-Native-Anwendung: Eine Intervention zur Reduzierung problematischer Smartphone-Nutzung}
+    \subtitle{(evt. Untertitel, Foto usw.)} % optional
+    \author{Devin Hasler}
+    % \date{}
+    \wohnort{3423 Lützelflüh, Datum}
+    %\referent{Name des Referenten\\ Titel\\Unterrichtetes Fach}
+    \referent{Vorname Name\\ Titel\\Dozent für Fach}
+    \eingereichtBei{Tobias Häberlein\\Departement Informatik\\Departementsleiter}
+
+    \maketitle
+
+
+    \begin{zusammenfassung}
+        Hier kommt die Zusammenfassung
+    \end{zusammenfassung}
+    \begin{abstract}
+        Hier kommt das Abstract
+    \end{abstract}
+    \tableofcontents
+
+    \begin{abkuerzungen}[MUSTER] % Das Muster dient zur Bestimmung der Einrueckungstiefe
+        \item[Hrsg.] Herausgeber
+        \item[NN] nomen nominandum (Namen nicht bekannt)
+        \item [o.J.] ohne Jahrgang
+    \end{abkuerzungen}
+
+
+    \startThesis % Befehl muss vor dem ersten chapter stehen (Seitennummerierung!)
+
+
+
+
+    \include{chapters/vorwort}
+    \include{chapters/einleitung}
+    \include{chapters/material}
+    \include{chapters/methodik}
+    \include{chapters/resultate}
+    \include{chapters/diskussion}
+    \include{chapters/fazit}
+    \include{chapters/ausblick}
+
+    % ==============================
+    % Anhang
+    \clearpage\appendix
+    \renewcommand{\thesection}{A}
+    \input{chapters/references}
+    \listoffigures
+    \listoftables
+    \lstlistoflistings
+    \chapter*{Hilfsmittelverzeichnis}
+    \addcontentsline{toc}{chapter}{Hilfsmittelverzeichnis}
+
+    \begin{table}[h!]
+        \centering
+        \begin{tabular}{|p{5cm}|p{5cm}|p{4cm}|} \hline
+        \textbf{Welches Hilfsmittel wurde eingesetzt?} & \textbf{Wozu wurde das Hilfsmittel eingesetzt?}  & \textbf{Betroffene Stellen}\\ \hline
+        Bezahltes Lektorat & Rechtschreibkorrektur & Gesamtes Dokument \\ \hline
+        Google Translate & Übersetzung von Textpassagen & Kapitel 5.3, Seite 25-26 \\ \hline
+        ChatGPT & Kapitelstruktur & Kapitel 5, Seiten 23-39 \\ \hline
+        &  & \\ \hline
+        \end{tabular}
+        \label{tab:hilfsmittelverzeichnis}
+    \end{table}
+    \include{chapters/anhang}
+
+
+
+    \chapter*{Selbstständigkeitserklärung}
+    Ich erkläre hiermit, dass ich diese Thesis selbständig verfasst
+    und keine andern als die angegebenen Quellen benutzt habe.
+    Alle Stellen, die wörtlich oder sinngemäss aus Quellen entnommen wurden,
+    habe ich als solche kenntlich gemacht.
+    Ich versichere zudem, dass ich bisher
+    noch keine wissenschaftliche Arbeit mit gleichem oder ähnlichem Inhalt an der
+    Fernfachhochschule Schweiz oder an einer anderen Hochschule eingereicht habe.
+    Mir ist bekannt, dass andernfalls die Fernfachhochschule Schweiz zum Entzug
+    des aufgrund dieser Thesis verliehenen Titels berechtigt ist.
+    \vspace{4cm}
+    \noindent
+    \signature{3cm}{2cm}{signatureShort}
+    \hrule \ \\[-0.5ex]
+    Lützelflüh, 23 June 2024, Devin Hasler
+
+\end{document}
